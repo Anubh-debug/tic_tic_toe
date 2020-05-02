@@ -1,23 +1,5 @@
 import random
 
-def sum(game_list_one, game_list_two, game_list_three):
-    if game_list_one[0] + game_list_one[1] + game_list_one[2] == 3 or 6:
-        return True
-    elif game_list_two[0] + game_list_two[1] + game_list_two[2] == 3 or 6:
-        return True
-    elif game_list_three[0] + game_list_three[1] + game_list_three[2] == 3 or 6:
-        return True
-    elif game_list_one[0] + game_list_two[0] + game_list_three[0] == 3 or 6:
-        return True
-    elif game_list_one[1] + game_list_two[1] + game_list_three[1] == 3 or 6:
-        return True
-    elif game_list_one[2] + game_list_two[2] + game_list_three[2] == 3 or 6:
-        return True
-    elif game_list_one[0] + game_list_two[1] + game_list_three[2] == 3 or 6:
-        return True
-    elif game_list_one[2] + game_list_two[1] + game_list_three[0] == 3 or 6:
-        return True
-
 def game(player):
     i = 0
     position_list = []
