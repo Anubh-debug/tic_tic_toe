@@ -1,7 +1,9 @@
 import random
 
+
 def game(player):
     i = 0
+    draw = True
     position_list = []
     game_list_one = [0, 1, 2]
     game_list_two = [3, 4, 5]
@@ -34,27 +36,35 @@ def game(player):
             print(game_list_three)
             if game_list_one[0] == "X" and game_list_one[1] == "X" and game_list_one[2] == "X":
                 print("player 1 is winner")
+                draw = False
                 break
             elif game_list_two[0] == "X" and game_list_two[1] == "X" and game_list_two[2] == "X":
                 print("player 1 is winner")
+                draw = False
                 break
             elif game_list_three[0] == "X" and game_list_three[1] == "X" and game_list_three[2] == "X":
                 print("player 1 is winner")
+                draw = False
                 break
             elif game_list_one[0] == "X" and game_list_two[0] == "X" and game_list_three[0] == "X":
                 print("player 1 is winner")
+                draw = False
                 break
             elif game_list_one[1] == "X" and game_list_two[1] == "X" and game_list_three[1] == "X":
                 print("player 1 is winner")
+                draw = False
                 break
             elif game_list_one[2] == "X" and game_list_two[2] == "X" and game_list_three[2] == "X":
                 print("player 1 is winner")
+                draw = False
                 break
             elif game_list_one[0] == "X" and game_list_two[1] == "X" and game_list_three[2] == "X":
                 print("player 1 is winner")
+                draw = False
                 break
             elif game_list_one[2] == "X" and game_list_two[1] == "X" and game_list_three[0] == "X":
                 print("player 1 is winner")
+                draw = False
                 break
             if repeat == False:
                 print("player 2 chance")
@@ -84,27 +94,35 @@ def game(player):
             print(game_list_three)
             if game_list_one[0] == "O" and game_list_one[1] == "O" and game_list_one[2] == "O":
                 print("player 2 is winner")
+                draw = False
                 break
             elif game_list_two[0] == "O" and game_list_two[1] == "O" and game_list_two[2] == "O":
                 print("player 2 is winner")
+                draw = False
                 break
             elif game_list_three[0] == "O" and game_list_three[1] == "O" and game_list_three[2] == "O":
                 print("player 2 is winner")
+                draw = False
                 break
             elif game_list_one[0] == "O" and game_list_two[0] == "O" and game_list_three[0] == "O":
                 print("player 2 is winner")
+                draw = False
                 break
             elif game_list_one[1] == "O" and game_list_two[1] == "O" and game_list_three[1] == "O":
                 print("player 2 is winner")
+                draw = False
                 break
             elif game_list_one[2] == "O" and game_list_two[2] == "O" and game_list_three[2] == "O":
                 print("player 2 is winner")
+                draw = False
                 break
             elif game_list_one[0] == "O" and game_list_two[1] == "O" and game_list_three[2] == "O":
                 print("player 2 is winner")
+                draw = False
                 break
             elif game_list_one[2] == "O" and game_list_two[1] == "O" and game_list_three[0] == "O":
                 print("player 2 is winner")
+                draw = False
                 break
             if repeat == False:
                 print("player 1 chance")
@@ -113,7 +131,8 @@ def game(player):
                 print("enter your chance again")
                 player = 2
         i += 1
-    print("Match draw. Play again to decide the winner.")
+    if draw  == True:
+        print("Match draw. Play again to decide the winner.")
 
 if __name__ == '__main__':
     print("------Welcome to tic tac toe------")
